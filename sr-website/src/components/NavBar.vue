@@ -18,7 +18,7 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10rem;
+  height: 10vh;
   padding: 0 4rem;
   background-color: $color-primary;
   font-size: 2rem;
