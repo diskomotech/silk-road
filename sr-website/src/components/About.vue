@@ -36,7 +36,7 @@ export default {};
 
   &__content {
     color: $color-black;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   &__img {
