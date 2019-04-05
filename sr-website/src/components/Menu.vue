@@ -5,9 +5,12 @@
 </template>
 
 <script>
-  export default { }
+  export default {};
 </script>
 
 <style lang="scss">
+.menu {
+  height: 100vh;
+}
 
 </style>
