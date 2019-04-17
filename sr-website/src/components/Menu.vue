@@ -1,5 +1,6 @@
 <template>
   <section class="menu">
+    <div class="menu__banner"></div>
     <div class="menu__card">
       <button class="menu__card-button">Cold Dishes</button>
       <button class="menu__card-button">Style Dishes</button>
@@ -10,24 +11,24 @@
   </section>
 </template>
 
+
 <script>
   export default {};
 </script>
 
 <style lang="scss">
 .menu {
-  background-image: url("../assets/images/lantern2.jpeg");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &__banner {
+    background-image: url("../assets/images/lantern2.jpeg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+  }
 
   &__card {
-    width: 80vw;
-    height: 80vh;
+    width: 100vw;
+    height: 100vh;
     background-color: $color-white; 
     border-radius: 2px;
     display: flex;
