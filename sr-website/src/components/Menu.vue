@@ -13,7 +13,11 @@
 
 
 <script>
-  export default {};
+  export default {
+    components: {
+      MenuDisplay
+    }
+  };
 </script>
 
 <style lang="scss">
@@ -42,7 +46,7 @@
       border-radius: 0.12em;
       box-sizing: border-box;
       text-decoration: none;
-      font-family: 'Roboto',sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 300;
       font-size: 2rem;
       color: $color-black;
