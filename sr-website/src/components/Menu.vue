@@ -30,24 +30,24 @@
     width: 100vw;
     height: 100vh;
     background-color: $color-white; 
-    border-radius: 2px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
 
     &-button {
-      display:inline-block;
-      padding:0.46em 1.6em;
-      border:0.1em solid $color-black;
-      margin:0 0.2em 0.2em 0;
-      border-radius:0.12em;
+      display: inline-block;
+      padding: 0.46em 1.6em;
+      border: 0.1em solid $color-black;
+      margin: 1.6rem 0.8rem 1.5rem 0;
+      border-radius: 0.12em;
       box-sizing: border-box;
-      text-decoration:none;
-      font-family:'Roboto',sans-serif;
-      font-weight:300;
+      text-decoration: none;
+      font-family: 'Roboto',sans-serif;
+      font-weight: 300;
       font-size: 2rem;
       color: $color-black;
-      text-align:center;
+      text-align: center;
+      transition: all 0.3s;
 
       &:hover {
         color: $color-white;
