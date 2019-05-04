@@ -13,6 +13,7 @@
 
 
 <script>
+import MenuDisplay from "@/components/MenuDisplay.vue";
   export default {
     components: {
       MenuDisplay
