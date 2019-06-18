@@ -2,7 +2,7 @@
   <section class="menu">
     <div class="menu__banner"></div>
     <div class="menu__card">
-      <button class="menu__card-button" v-on:click="menuClick">Cold Dishes</button>
+      <button class="menu__card-button" v-on:click="menuClick('cold')">Cold Dishes</button>
       <button class="menu__card-button" v-on:click="menuClick">Style Dishes</button>
       <button class="menu__card-button" v-on:click="menuClick">Hot Dishes</button>
       <button class="menu__card-button" v-on:click="menuClick">Dumplings</button>
@@ -26,10 +26,11 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
       }
     },
     methods: {
-      menuClick: function(event) {
+      menuClick: function(menuType) {
         //Run function to display correct menu for the button clicked
+        //NOT WORKING YET
         const clicked = event.target.innerText;
-        return this.menu = clicked;
+        return this.menu = menuType;
       }
     },
     components: {
