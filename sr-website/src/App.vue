@@ -13,15 +13,13 @@ import NavBar from "@/components/NavBar.vue";
 import Intro from "@/components/Intro.vue";
 import About from "@/components/About.vue";
 import Menu from "@/components/Menu.vue";
-import MenuDisplay from "@/components/MenuDisplay.vue";
 
 export default {
   components: {
     NavBar,
     Intro,
     About,
-    Menu,
-    MenuDisplay
+    Menu
   }
 };
 </script>

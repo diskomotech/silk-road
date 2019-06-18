@@ -2,11 +2,11 @@
   <section class="menu">
     <div class="menu__banner"></div>
     <div class="menu__card">
-      <button class="menu__card-button">Cold Dishes</button>
-      <button class="menu__card-button">Style Dishes</button>
-      <button class="menu__card-button">Hot Dishes</button>
-      <button class="menu__card-button">Dumplings</button>
-      <button class="menu__card-button">Drinks</button>
+      <button class="menu__card-button" v-on:click="menuClick">Cold Dishes</button>
+      <button class="menu__card-button" v-on:click="menuClick">Style Dishes</button>
+      <button class="menu__card-button" v-on:click="menuClick">Hot Dishes</button>
+      <button class="menu__card-button" v-on:click="menuClick">Dumplings</button>
+      <button class="menu__card-button" v-on:click="menuClick">Drinks</button>
     </div>
   </section>
 </template>
@@ -20,6 +20,18 @@ import MenuHot from "@/components/MenuHot.vue";
 import MenuStyleDish from "@/components/MenuStyleDish.vue";
 
   export default {
+    data() {
+      return {
+        menu: ''
+      }
+    },
+    methods: {
+      menuClick: function(event) {
+        //Run function to display correct menu for the button clicked
+        const clicked = event.target.innerText;
+        return this.menu = clicked;
+      }
+    },
     components: {
       MenuCold,
       MenuDrinks,
