@@ -13,10 +13,19 @@
 
 
 <script>
-import MenuDisplay from "@/components/MenuDisplay.vue";
+import MenuCold from "@/components/MenuCold.vue";
+import MenuDrinks from "@/components/MenuDrinks.vue";
+import MenuDumplings from "@/components/MenuDumplings.vue";
+import MenuHot from "@/components/MenuHot.vue";
+import MenuStyleDish from "@/components/MenuStyleDish.vue";
+
   export default {
     components: {
-      MenuDisplay
+      MenuCold,
+      MenuDrinks,
+      MenuDumplings,
+      MenuHot,
+      MenuStyleDish
     }
   };
 </script>

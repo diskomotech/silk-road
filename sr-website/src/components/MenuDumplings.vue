@@ -10,15 +10,15 @@
       return {
         items: [
           {
-            name: 'Mix Shreds Salad',
-            veg: true,
-            desc: 'Carrot vermicelli & spinach in a hot & sour sauce',
+            name: 'Lamb & Onion Filling',
+            veg: false,
+            desc: '',
             price: 3
           },
           {
-            name: 'Xinjiang Spicy Salad',
-            veg: true,
-            desc: 'Onion, green chilli, tomato & coriander',
+            name: 'Beef & Onion Filling',
+            veg: false,
+            desc: '',
             price: 3
           },
         ]
