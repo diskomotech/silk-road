@@ -7,6 +7,14 @@
       <button class="menu__card-button" @click="menuClick">Hot Dishes</button>
       <button class="menu__card-button" @click="menuClick">Dumplings</button>
       <button class="menu__card-button" @click="menuClick">Drinks</button>
+        <div class="menu__details">
+            <!-- <v-if="menu === cold" cold/>
+            <v-if="menu === style" style/>
+            <v-if="menu === hot" hot/>
+            <v-if="menu === dumplings" dumplings/>
+            <v-if="menu === drinks" drinks/> -->
+            <component v-bind:is="menu"></component>
+        </div>
     </div>
   </section>
 </template>
@@ -22,7 +30,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
   export default {
     data() {
       return {
-        menu: ''
+        menu: 'cold'
       }
     },
     methods: {
@@ -38,11 +46,11 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
       }
     },
     components: {
-      MenuCold,
-      MenuDrinks,
-      MenuDumplings,
-      MenuHot,
-      MenuStyleDish
+      'cold': MenuCold,
+      'drinks': MenuDrinks,
+      'dumplings': MenuDumplings,
+      'hot': MenuHot,
+      'style': MenuStyleDish
     }
   };
 </script>
@@ -56,6 +64,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
     position: relative;
     height: 100vh;
   }
+
 
   &__card {
     width: 100vw;
