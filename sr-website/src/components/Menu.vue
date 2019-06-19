@@ -2,11 +2,13 @@
   <section class="menu">
     <div class="menu__banner"></div>
     <div class="menu__card">
-      <button class="menu__card-button" @click="menuClick">Cold Dishes</button>
+
+      <button class="menu__card-button menu__cold-button" @click="menuClick">Cold Dishes</button>
       <button class="menu__card-button" @click="menuClick">Style Dishes</button>
       <button class="menu__card-button" @click="menuClick">Hot Dishes</button>
       <button class="menu__card-button" @click="menuClick">Dumplings</button>
       <button class="menu__card-button" @click="menuClick">Drinks</button>
+
         <div class="menu__details">
             <!-- <v-if="menu === cold" cold/>
             <v-if="menu === style" style/>
@@ -65,13 +67,14 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
     height: 100vh;
   }
 
-
   &__card {
     width: 100vw;
     height: 100vh;
     background-color: $color-white; 
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 10em repeat(5, 1fr) 10em;
+    grid-template-rows: 10em auto;
+    grid-gap: 1.5em;
     justify-content: center;
 
     &-button {
@@ -95,6 +98,15 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
       }
     }
   }
+
+  &__cold-button {
+    grid-column-start: 2;
+  }
+
+  &__details {
+    grid-column-start: 2;
+  }
+
 }
 
 </style>
