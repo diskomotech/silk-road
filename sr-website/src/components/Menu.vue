@@ -2,11 +2,11 @@
   <section class="menu">
     <div class="menu__banner"></div>
     <div class="menu__card">
-      <button class="menu__card-button" v-on:click.stop="menuClick">Cold Dishes</button>
-      <button class="menu__card-button" v-on:click.stop="menuClick">Style Dishes</button>
-      <button class="menu__card-button" v-on:click="menuClick">Hot Dishes</button>
-      <button class="menu__card-button" v-on:click="menuClick">Dumplings</button>
-      <button class="menu__card-button" v-on:click="menuClick">Drinks</button>
+      <button class="menu__card-button" @click="menuClick">Cold Dishes</button>
+      <button class="menu__card-button" @click="menuClick">Style Dishes</button>
+      <button class="menu__card-button" @click="menuClick">Hot Dishes</button>
+      <button class="menu__card-button" @click="menuClick">Dumplings</button>
+      <button class="menu__card-button" @click="menuClick">Drinks</button>
     </div>
   </section>
 </template>
@@ -28,7 +28,13 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
     methods: {
       menuClick: function(event) {
         //Run function to display correct menu for the button clicked
-        this.menu = event.target.innerText;
+        let menuText = event.target.innerText.toLowerCase();
+        const space = menuText.indexOf(' ');
+        if (space > 0) {
+          menuText = menuText.slice(0, space);
+        }
+        
+        this.menu = menuText;
       }
     },
     components: {
