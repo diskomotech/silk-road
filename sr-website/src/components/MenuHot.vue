@@ -107,7 +107,7 @@
             price: 8
           },
           {
-            name: 'Xingjiang Style Noodle in Soup',
+            name: 'Xinjiang Style Noodle in Soup',
             veg: false,
             desc: 'A bowl of sour soup with hand-pulled noodles, lamb & tomato',
             price: 4.50

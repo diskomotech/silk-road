@@ -73,7 +73,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
 
   &__card {
     width: 100vw;
-    // height: 100vh;
+    min-height: 100vh;
     background-color: $color-white; 
     display: grid;
     grid-template-columns: 10em repeat(5, 1fr) 10em;
