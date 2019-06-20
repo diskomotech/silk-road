@@ -43,6 +43,10 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
         if (space > 0) {
           menuText = menuText.slice(0, space);
         }
+        //Vue won't allow keyword 'style' to be used as component name
+        if (menuText === 'style') {
+          menuText = 'styled'
+        }
         
         this.menu = menuText;
       }
@@ -52,7 +56,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
       'drinks': MenuDrinks,
       'dumplings': MenuDumplings,
       'hot': MenuHot,
-      'style': MenuStyleDish
+      'styled': MenuStyleDish
     }
   };
 </script>
