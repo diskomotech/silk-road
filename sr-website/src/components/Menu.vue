@@ -3,13 +3,13 @@
     <div class="menu__banner"></div>
     <div class="menu__card">
 
-      <button class="menu__card-button menu__cold-button" @click="menuClick">Cold Dishes</button>
+      <button class="menu__card-button menu__card-button--cold" @click="menuClick">Cold Dishes</button>
       <button class="menu__card-button" @click="menuClick">Style Dishes</button>
       <button class="menu__card-button" @click="menuClick">Hot Dishes</button>
       <button class="menu__card-button" @click="menuClick">Dumplings</button>
       <button class="menu__card-button" @click="menuClick">Drinks</button>
 
-        <div class="menu__details">
+        <div class="menu__dish">
             <!-- <v-if="menu === cold" cold/>
             <v-if="menu === style" style/>
             <v-if="menu === hot" hot/>
@@ -69,7 +69,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
 
   &__card {
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     background-color: $color-white; 
     display: grid;
     grid-template-columns: 10em repeat(5, 1fr) 10em;
@@ -92,6 +92,10 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
       text-align: center;
       transition: all 0.3s;
 
+      &--cold {
+        grid-column-start: 2;
+      }
+
       &:hover {
         color: $color-white;
         background-color: $color-black;
@@ -99,14 +103,19 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
     }
   }
 
-  &__cold-button {
+  &__dish {
     grid-column-start: 2;
-  }
+    grid-column-end: 7;
+    font-size: 1.6rem;
+    
+    &-content {
+      margin: 100px 0 5px 0;
+    }
 
-  &__details {
-    grid-column-start: 2;
+    &-name {
+      font-size: 1.8rem;
+    }
   }
-
 }
 
 </style>

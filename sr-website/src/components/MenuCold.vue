@@ -1,11 +1,12 @@
 <template>
   <div>
     <div v-for="item in items">
-      <span class="menu__dish-name">{{item.name}}</span>
+      <span class="menu__dish-content menu__dish-name">{{item.name}}</span>
       <br/>
-      <span class="menu__dish-desc">{{item.desc}}</span>
+      <span class="menu__dish-content menu__dish-desc">{{item.desc}}</span>
       <br/>
-      <span class="menu__dish-price">{{item.price}}</span>
+      <span class="menu__dish-content menu__dish-price">£{{item.price}}</span>
+      <hr>
     </div>
   </div>
 </template>
@@ -62,7 +63,3 @@
     }
   }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
