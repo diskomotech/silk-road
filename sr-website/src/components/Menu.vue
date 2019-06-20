@@ -109,7 +109,7 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
     font-size: 1.6rem;
     
     &-content {
-      margin: 100px 0 5px 0;
+      line-height: 1.4;
     }
 
     &-name {
