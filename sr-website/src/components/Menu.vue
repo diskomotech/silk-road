@@ -1,6 +1,6 @@
 <template>
   <section class="menu">
-    <div class="menu__banner"></div>
+    <div class="menu__banner">
     <div class="menu__card">
 
       <button class="menu__card-button menu__card-button--cold" @click="menuClick">Cold Dishes</button>
@@ -10,12 +10,8 @@
       <button class="menu__card-button" @click="menuClick">Drinks</button>
 
         <div class="menu__dish">
-            <!-- <v-if="menu === cold" cold/>
-            <v-if="menu === style" style/>
-            <v-if="menu === hot" hot/>
-            <v-if="menu === dumplings" dumplings/>
-            <v-if="menu === drinks" drinks/> -->
             <component v-bind:is="menu"></component>
+        </div>
         </div>
     </div>
   </section>
@@ -64,22 +60,22 @@ import MenuStyleDish from "@/components/MenuStyleDish.vue";
 <style lang="scss">
 .menu {
   &__banner {
-    background-image: url("../assets/images/lantern2.jpeg");
-    background-size: cover;
-    background-position: center center;
+    background: url("../assets/images/lantern2.jpeg") center/85% fixed;
     position: relative;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__card {
-    width: 100vw;
-    min-height: 100vh;
     background-color: $color-white; 
     display: grid;
     grid-template-columns: 10em repeat(5, 1fr) 10em;
     grid-template-rows: 10em auto;
     grid-gap: 1.5em;
     justify-content: center;
+    max-width: 70vw;
+    min-height: 100vh;
 
     &-button {
       display: inline-block;
